@@ -75,7 +75,7 @@ form .button {
   justify-content: center;
   max-width: 270px;
   height: 50px;
-  background: #C65670;
+  background: #eb8e14;
  border: none;
   border-radius: 7px;
   color: #fff;
@@ -88,9 +88,9 @@ font-family: 'Montserrat', sans-serif;
 
 form .button:hover {
   background:  transparent;
-color:#b34f66;
+color:#eb8e14;
   cursor: pointer;
-  border: 1px solid #C65670;
+  border: 1px solid #eb8e14;
 }
 
 /* Mailchimp CSS */
