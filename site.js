@@ -25,7 +25,7 @@ let questions = [
     id: 4,
     question: "How do you handle any uncomfortable situations?",
    
-    options: ["With comfort and ease", "I procrastinate to deal with situations" , "I usually tend to run away from situation"],
+    options: ["With comfort and ease", "I procrastinate" , "I usually run away from the situation"],
   },
   {
     id: 5,
@@ -115,13 +115,13 @@ question: "I am willing to accept the consequences of my own behavior.",
 {
   id: 16,
   question: "Have you experienced any of the following? " ,
-  options: ["Unsupportive or dismissive parents","Friends who are bad influences","Stressful life events","Trauma or abuse or bullying","None of the above",
+  options: ["Unsupportive or dismissive parents","Stressful life events","Trauma or abuse or bullying","None of the above",
   ],
 },
 {
   id: 17,
-  question: "What have you gone/going through in the past/present? " ,
-  options: ["Mood disorders such as depression","Anxiety","Loneliness","Ongoing medical issues","None of the above"
+  question: "Have you experienced" ,
+  options: ["Mood disorders","Anxiety","Loneliness","Other Mental Health concerns","None of the above"
   ],
 },
 ];
@@ -250,7 +250,24 @@ function show(count) {
     `;
   }
 
-  if(question_count > 14) {
+  else if(question_count == 15) {
+    let [first, second , third , fourth ] = questions[count].options;
+    ///////no of questions
+  
+    question.innerHTML = `
+    <p class="iamquestion"> ${questions[count].question}</p>
+     <ul class="option_group">
+    <li><span class="option">${first}</span></li>
+    <li ><span class="option">${second}</span></li>
+    <li ><span class="option">${third}</span></li>
+    <li ><span class="option">${fourth}</span></li>
+   
+   
+  </ul> 
+    `;
+    
+  }
+  else if(question_count > 15) {
     let [first, second , third , fourth , fifth] = questions[count].options;
     ///////no of questions
   
